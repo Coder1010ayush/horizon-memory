@@ -15,7 +15,8 @@ venv/
 # IDE
 .vscode/
 .idea/
-
+.kiwi/
+planner/
 # Testing
 .pytest_cache/
 .coverage
