@@ -42,35 +42,6 @@ horizon insights
 horizon serve
 curl http://localhost:8765/health
 ```
-
-```python
-# Python SDK
-import asyncio
-from horizon import HorizonClient
-
-async def main():
-    horizon = HorizonClient()
-    await horizon.ingest("~/research-papers/")
-
-    # Ask a question
-    result = await horizon.ask("What did competitors charge?")
-    print(result.answer)
-
-    # Deep research
-    report = await horizon.research(
-        "Analyze pricing trends across all competitors",
-        depth="deep"
-    )
-    print(report.summary)
-
-    # Auto insights
-    insights = await horizon.insights()
-    for topic in insights.topics:
-        print(f"{topic.name}: {topic.summary}")
-
-asyncio.run(main())
-```
-
 ---
 
 ## Architecture
